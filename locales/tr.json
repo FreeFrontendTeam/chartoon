@@ -1,0 +1,53 @@
+{
+  "header": {
+    "title": "Chartoon",
+    "version": "v0.1.0",
+    "nav": {
+      "showcase": "Örnekler",
+      "features": "Özellikler",
+      "docs": "Dokümantasyon"
+    }
+  },
+  "hero": {
+    "title": "Chartoon — Hafif, hızlı ve güzel grafikler",
+    "desc": "D3.js ile yazılmış, vanilla JavaScript tabanlı chart kütüphanen. Bar, Line, Pie, World grafiklerini kolayca gömüp kişiselleştirebilir ve animasyonlarla canlandırabilirsin.",
+    "cta_start": "Başla",
+    "cta_docs": "Dokümantasyon",
+    "image_caption": "Chart yerleşimi",
+    "chart_placeholder": "burada gösterilecek"
+  },
+  "features": {
+    "heading": "Öne çıkan özellikler",
+    "items": [
+      {"title": "Hafif ve performans odaklı", "desc": "Vanilla JS ile yazıldı, çok küçük bir bundle ile yüksek performans sağlar."},
+      {"title": "D3.js gücü", "desc": "D3 ekosisteminin esnekliğiyle güçlü görselleştirmeler oluşturun."},
+      {"title": "Kolay API", "desc": "Basit ve tahmin edilebilir API ile hızla entegre edin."},
+      {"title": "Özelleştirilebilir", "desc": "Renk, animasyon ve etkileşimleri projenize göre şekillendirin."}
+    ]
+  },
+  "showcase": {
+    "heading": "Örnek grafikler",
+    "charts": [
+      {"id": "bar", "title": "Bar Chart", "href": "/get-started?chart=bar"},
+      {"id": "line", "title": "Line Chart", "href": "/get-started?chart=line"},
+      {"id": "pie", "title": "Pie Chart", "href": "/get-started?chart=pie"},
+      {"id": "world", "title": "World Chart", "href": "/get-started?chart=world"}
+    ],
+    "placeholder_suffix": "— burada gösterilecek"
+  },
+  "footer": {
+    "copyright": "© {year} Chartoon",
+    "links": {"docs": "Dokümantasyon", "github": "GitHub", "license": "Lisans"}
+  },
+  "code": {"copy": "Kopyala", "copied": "Kopyalandı"}
+  ,
+  "getStarted": {
+    "title": "Başlarken",
+    "description": "Bir npm paketinin nasıl kurulacağını ve kullanılacağını gösteren kısa bir örnek. (Metinleri daha sonra değiştirebilirsiniz.)",
+    "installTitle": "Kurulum",
+    "installCommand": "npm install example-package@latest",
+    "usageTitle": "Kullanım",
+    "usageCode": "import { createChart } from 'example-package';\n\n// bir grafik oluştur\ncreateChart(document.getElementById('root'));",
+    "backToHome": "Ana sayfaya dön"
+  }
+}

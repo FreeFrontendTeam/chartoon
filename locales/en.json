@@ -1,0 +1,53 @@
+{
+  "header": {
+    "title": "Chartoon",
+    "version": "v0.1.0",
+    "nav": {
+      "showcase": "Showcase",
+      "features": "Features",
+      "docs": "Docs"
+    }
+  },
+  "hero": {
+    "title": "Chartoon — Lightweight, fast and beautiful charts",
+    "desc": "A vanilla JavaScript charting library built with D3.js. Easily embed Bar, Line, Pie, World charts and animate them with customization.",
+    "cta_start": "Get started",
+    "cta_docs": "Documentation",
+    "image_caption": "Chart layout",
+    "chart_placeholder": "will be shown here"
+  },
+  "features": {
+    "heading": "Key features",
+    "items": [
+      {"title": "Lightweight & performance focused", "desc": "Built with vanilla JS, provides high performance with a tiny bundle."},
+      {"title": "Powered by D3.js", "desc": "Leverage the flexibility of D3 to build powerful visualizations."},
+      {"title": "Easy API", "desc": "Integrate quickly with a simple and predictable API."},
+      {"title": "Customizable", "desc": "Shape colors, animations and interactions to fit your project."}
+    ]
+  },
+  "showcase": {
+    "heading": "Example charts",
+    "charts": [
+      {"id": "bar", "title": "Bar Chart", "href": "/get-started?chart=bar"},
+      {"id": "line", "title": "Line Chart", "href": "/get-started?chart=line"},
+      {"id": "pie", "title": "Pie Chart", "href": "/get-started?chart=pie"},
+      {"id": "world", "title": "World Chart", "href": "/get-started?chart=world"}
+    ],
+    "placeholder_suffix": "— will be shown here"
+  },
+  "footer": {
+    "copyright": "© {year} Chartoon",
+    "links": {"docs": "Docs", "github": "GitHub", "license": "License"}
+  },
+  "code": {"copy": "Copy", "copied": "Copied"}
+  ,
+  "getStarted": {
+    "title": "Get Started",
+    "description": "A short example showing how to install and use an npm package. (You can change these texts later.)",
+    "installTitle": "Install",
+    "installCommand": "npm install example-package@latest",
+    "usageTitle": "Usage",
+    "usageCode": "import { createChart } from 'example-package';\n\n// create a chart\ncreateChart(document.getElementById('root'));",
+    "backToHome": "Back to home"
+  }
+}
