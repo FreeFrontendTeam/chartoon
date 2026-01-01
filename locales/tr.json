@@ -31,7 +31,8 @@
       {"id": "bar", "title": "Bar Chart", "href": "/get-started?chart=bar"},
       {"id": "line", "title": "Line Chart", "href": "/get-started?chart=line"},
       {"id": "pie", "title": "Pie Chart", "href": "/get-started?chart=pie"},
-      {"id": "world", "title": "World Chart", "href": "/get-started?chart=world"}
+      {"id": "world", "title": "Map Chart", "href": "/get-started?chart=world"},
+      {"id": "radar", "title": "Radar Chart", "href": "/get-started?chart=radar"}
     ],
     "placeholder_suffix": "— burada gösterilecek"
   },

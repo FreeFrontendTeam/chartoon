@@ -297,7 +297,8 @@ export default function WorldExample() {
       ],
       width:900,
       height:600,
-      responsive:true
+      responsive:true,
+      tooltipVisible:true
     });
 
     return () => {
@@ -367,6 +368,207 @@ onBeforeUnmount(() => {
 </script>
 
 <div bind:this={el} style="width:100%;height:600px"></div>`
+  },
+
+  radar: {
+    React: `import { useEffect, useRef } from 'react';
+import { ChartoonRadarChart } from 'chartoon';
+
+export default function RadarExample() {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const radarChartData = [
+      {
+        title: "Frontend",
+        data: [
+          { label: "Performance", value: 85 },
+          { label: "Accessibility", value: 70 },
+          { label: "SEO", value: 90 },
+          { label: "Best Practices", value: 80 },
+          { label: "UX", value: 88 },
+        ],
+      },
+      {
+        title: "Backend",
+        data: [
+          { label: "Performance", value: 78 },
+          { label: "Accessibility", value: 60 },
+          { label: "SEO", value: 65 },
+          { label: "Best Practices", value: 92 },
+          { label: "UX", value: 70 },
+        ],
+      },
+      {
+        title: "DevOps",
+        data: [
+          { label: "Performance", value: 90 },
+          { label: "Accessibility", value: 55 },
+          { label: "SEO", value: 50 },
+          { label: "Best Practices", value: 88 },
+          { label: "UX", value: 60 },
+        ],
+      },
+    ];
+
+    new ChartoonRadarChart(ref.current, {
+      data: radarChartData,
+      width: 600,
+      height: 400,
+      responsive: true,
+      colors: ["red", "black", "blue"],
+      levels: 5,
+      maxValue: 100,
+      areaOpacity: 0.35,
+      strokeWidth: 1,
+      circleConfig: {
+        radius: 4,
+      },
+    });
+
+    return () => {
+      if (ref.current) ref.current.innerHTML = '';
+    };
+  }, []);
+
+  return <div ref={ref} style={{ width:'100%', height:400 }} />;
+}`,
+
+    Vue: `<!-- Vue 3 component -->
+<template>
+  <div ref="el" style="width:100%;height:400px"></div>
+</template>
+
+<script setup>
+import { onMounted, ref, onBeforeUnmount } from 'vue';
+import { ChartoonRadarChart } from 'chartoon';
+
+const el = ref(null);
+let chart = null;
+
+onMounted(() => {
+  const radarChartData = [
+    {
+      title: "Frontend",
+      data: [
+        { label: "Performance", value: 85 },
+        { label: "Accessibility", value: 70 },
+        { label: "SEO", value: 90 },
+        { label: "Best Practices", value: 80 },
+        { label: "UX", value: 88 },
+      ],
+    },
+    {
+      title: "Backend",
+      data: [
+        { label: "Performance", value: 78 },
+        { label: "Accessibility", value: 60 },
+        { label: "SEO", value: 65 },
+        { label: "Best Practices", value: 92 },
+        { label: "UX", value: 70 },
+      ],
+    },
+    {
+      title: "DevOps",
+      data: [
+        { label: "Performance", value: 90 },
+        { label: "Accessibility", value: 55 },
+        { label: "SEO", value: 50 },
+        { label: "Best Practices", value: 88 },
+        { label: "UX", value: 60 },
+      ],
+    },
+  ];
+
+  chart = new ChartoonRadarChart(el.value, {
+    data: radarChartData,
+    width: 600,
+    height: 400,
+    responsive: true,
+    colors: ["red", "black", "blue"],
+    levels: 5,
+    maxValue: 100,
+    areaOpacity: 0.35,
+    strokeWidth: 1,
+    circleConfig: {
+      radius: 4,
+    },
+  });
+});
+
+onBeforeUnmount(() => {
+  if (el.value) el.value.innerHTML = '';
+  chart = null;
+});
+</script>`,
+
+    Svelte: `<!-- Svelte component -->
+<script>
+  import { onMount, onDestroy } from 'svelte';
+  import { ChartoonRadarChart } from 'chartoon';
+
+  let el;
+  let chart;
+
+  onMount(() => {
+    const radarChartData = [
+      {
+        title: "Frontend",
+        data: [
+          { label: "Performance", value: 85 },
+          { label: "Accessibility", value: 70 },
+          { label: "SEO", value: 90 },
+          { label: "Best Practices", value: 80 },
+          { label: "UX", value: 88 },
+        ],
+      },
+      {
+        title: "Backend",
+        data: [
+          { label: "Performance", value: 78 },
+          { label: "Accessibility", value: 60 },
+          { label: "SEO", value: 65 },
+          { label: "Best Practices", value: 92 },
+          { label: "UX", value: 70 },
+        ],
+      },
+      {
+        title: "DevOps",
+        data: [
+          { label: "Performance", value: 90 },
+          { label: "Accessibility", value: 55 },
+          { label: "SEO", value: 50 },
+          { label: "Best Practices", value: 88 },
+          { label: "UX", value: 60 },
+        ],
+      },
+    ];
+
+    chart = new ChartoonRadarChart(el, {
+      data: radarChartData,
+      width: 600,
+      height: 400,
+      responsive: true,
+      colors: ["red", "black", "blue"],
+      levels: 5,
+      maxValue: 100,
+      areaOpacity: 0.35,
+      strokeWidth: 1,
+      circleConfig: {
+        radius: 4,
+      },
+    });
+  });
+
+  onDestroy(() => {
+    if (el) el.innerHTML = '';
+    chart = null;
+  });
+</script>
+
+<div bind:this={el} style="width:100%;height:400px"></div>`
   }
 };
 

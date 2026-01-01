@@ -6,6 +6,7 @@ import {
   ChartoonPieChart,
   ChartoonMapChart,
   ChartoonBulletChart,
+  ChartoonRadarChart,
 } from "chartoon";
 
 interface ChartPlaceholderProps {
@@ -127,6 +128,77 @@ export default function ChartPlaceholder({
           break;
         }
 
+        case "radar": {
+          const createRadar = () => {
+            if (!mountEl) return;
+            mountEl.innerHTML = "";
+            const rect = mountEl.getBoundingClientRect();
+            const width = Math.max(400, Math.min(600, Math.round(rect.width)));
+            const height = Math.max(300, Math.min(400, Math.round(rect.height)));
+
+            chart = new (ChartoonRadarChart)(mountEl, {
+              data: [
+                {
+                  title: "Frontend",
+                  data: [
+                    { label: "Performance", value: 85 },
+                    { label: "Accessibility", value: 70 },
+                    { label: "SEO", value: 90 },
+                    { label: "Best Practices", value: 80 },
+                    { label: "UX", value: 88 },
+                  ],
+                },
+                {
+                  title: "Backend",
+                  data: [
+                    { label: "Performance", value: 78 },
+                    { label: "Accessibility", value: 60 },
+                    { label: "SEO", value: 65 },
+                    { label: "Best Practices", value: 92 },
+                    { label: "UX", value: 70 },
+                  ],
+                },
+                {
+                  title: "DevOps",
+                  data: [
+                    { label: "Performance", value: 90 },
+                    { label: "Accessibility", value: 55 },
+                    { label: "SEO", value: 50 },
+                    { label: "Best Practices", value: 88 },
+                    { label: "UX", value: 60 },
+                  ],
+                },
+              ],
+              width,
+              height,
+              responsive: true,
+              colors: ["#ef4444", "#000000", "#3b82f6"],
+              levels: 5,
+              maxValue: 100,
+              areaOpacity: 0.35,
+              strokeWidth: 1,
+              circleConfig: {
+                radius: 4,
+              },
+            });
+          };
+
+          // initial create
+          createRadar();
+
+          // observe for size changes
+          if (typeof ResizeObserver !== "undefined") {
+            resizeObserver = new ResizeObserver(() => {
+              createRadar();
+            });
+            resizeObserver.observe(mountEl);
+          } else {
+            onWindowResize = () => createRadar();
+            window.addEventListener("resize", onWindowResize);
+          }
+
+          break;
+        }
 
         default: {
           // no-op; keep placeholder

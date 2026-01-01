@@ -10,7 +10,7 @@
   },
   "hero": {
     "title": "Chartoon — Lightweight, fast and beautiful charts",
-    "desc": "A vanilla JavaScript charting library built with D3.js. Easily embed Bar, Line, Pie, World charts and animate them with customization.",
+    "desc": "A vanilla JavaScript charting library built with D3.js. Easily embed Bar, Line, Pie, Map charts and animate them with customization.",
     "cta_start": "Get started",
     "cta_docs": "Documentation",
     "image_caption": "Chart layout",
@@ -31,7 +31,8 @@
       {"id": "bar", "title": "Bar Chart", "href": "/get-started?chart=bar"},
       {"id": "line", "title": "Line Chart", "href": "/get-started?chart=line"},
       {"id": "pie", "title": "Pie Chart", "href": "/get-started?chart=pie"},
-      {"id": "world", "title": "World Chart", "href": "/get-started?chart=world"}
+      {"id": "world", "title": "Map Chart", "href": "/get-started?chart=world"},
+      {"id": "radar", "title": "Radar Chart", "href": "/get-started?chart=radar"}
     ],
     "placeholder_suffix": "— will be shown here"
   },

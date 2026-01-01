@@ -28,7 +28,7 @@
 - [x] **Refactored Large Components**
   - Header.tsx: 110 lines → 30 lines (-71%)
   - Get-started page: 150 lines → 35 lines (-77%)
-  - Bar/Line/Pie/World chart pages: 60 lines → 20 lines each (-67%)
+  - Bar/Line/Pie/Map chart pages: 60 lines → 20 lines each (-67%)
 
 ### 🏗️ Architecture
 
