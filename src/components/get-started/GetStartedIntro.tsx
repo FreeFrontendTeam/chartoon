@@ -10,15 +10,15 @@ export default function GetStartedIntro() {
 
       <section className="mb-6">
         <h2 className="font-medium mb-2">{t("getStarted.installTitle")}</h2>
-        <div className="rounded-md bg-neutral-100 dark:bg-neutral-900 p-4 font-mono text-sm">
-          <pre>{t("getStarted.installCommand")}</pre>
+        <div className="rounded-md bg-neutral-100 dark:bg-neutral-900 p-4 font-mono text-sm overflow-x-auto">
+          <pre className="whitespace-pre">{t("getStarted.installCommand")}</pre>
         </div>
       </section>
 
       <section className="mb-6">
         <h2 className="font-medium mb-2">{t("getStarted.usageTitle")}</h2>
-        <div className="rounded-md bg-neutral-100 dark:bg-neutral-900 p-4 font-mono text-sm">
-          <pre>{t("getStarted.usageCode")}</pre>
+        <div className="rounded-md bg-neutral-100 dark:bg-neutral-900 p-4 font-mono text-sm overflow-x-auto">
+          <pre className="whitespace-pre">{t("getStarted.usageCode")}</pre>
         </div>
       </section>
 
