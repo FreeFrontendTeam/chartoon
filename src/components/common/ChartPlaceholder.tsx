@@ -181,13 +181,15 @@ export default function ChartPlaceholder({
                 markers: [85],
               },
             ];
-
-            chart = new ChartoonBulletChart(mountEl, {
+            const props = {
               data: bulletData,
-              margin: { top: 20, right: 40, bottom: 20, left: 120 },
+              margin: 20,
               width,
               height,
               responsive: true,
+            }
+            chart = new ChartoonBulletChart(mountEl, {
+              ...props
             });
           };
 
